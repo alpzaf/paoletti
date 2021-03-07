@@ -1,0 +1,173 @@
+.blue-banner{
+    width: 100%;
+    display: block;
+    padding: 50px 80px 50px 80px;
+    .blue-bg-banner{
+        background-image: url(../img/blue-banner.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 550px;
+        overflow: hidden;
+        .blue-banner-caption{
+            padding: 150px 0 200px 70px;
+            h2{
+                font-weight: 300;
+                color: #fff;
+                text-shadow: 0px 8px 6px #00000052;
+                strong{
+                    display: block;
+                    color: #fff;
+                    font-weight: 900;
+                    font-size: 84px;
+                }
+            }
+            h1{
+                font-weight: 300;
+                color: #fff;
+                font-size: 46px;
+                text-shadow: 0px 8px 6px #00000052;
+            }
+            button{
+                background: transparent;
+                color: white;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                font-size: 26px;
+                margin-top: 10px;
+                padding: 15px 30px 15px 30px;
+                text-shadow: 0px 8px 6px #00000052;
+                &:hover{
+                    box-shadow: inset 0px 1px 9px 1px #ffffff;
+                }
+            }
+        }
+    }
+}
+.b2b{
+    padding: 50px 80px 50px 80px;
+    .b2b-img{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    h4{
+        text-align: center;
+        color: #770b1f;
+        font-weight: 900;
+    }
+    h2{
+        text-align: center;
+        color: #5a5a5a;
+    }
+    h6{
+        text-align: center;
+        color: #5a5a5a;
+        padding: 15px 30px 15px 30px;
+    }
+    button{
+        display: block;
+        margin: auto;
+        background: transparent;
+        border: 1px solid #770b1f;
+        color: #770b1f;
+        font-weight: 900;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        &:hover{
+            background: #770b20;
+            color: white;
+        }
+    }
+}
+.features-banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    .features-row{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 40px 0 40px 0;
+        justify-content: center;
+        border: 1px solid #00000036;
+        @media #{$md}{
+            justify-content: center;
+            padding: 40px 30px 40px 30px;
+        }
+        .feature{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            border-right: 1px solid rgba(0, 0, 0, 0.247);
+            @media #{$md}{
+                flex-direction: column;
+                padding: 20px;
+            }
+            @media #{$mini}{
+                flex-direction: column;
+                padding: 20px;
+            }
+            @media #{$md}{
+                flex-direction: column;
+                padding: 20px;
+            }
+            .feature-img{
+                display: flex;
+                align-items: baseline;
+                @media #{$md}{
+                    justify-content: center;
+                }
+                @media #{$mini}{
+                    justify-content: center;
+                }
+                img{
+                    width: 100%;
+                    @media #{$md}{
+                        width: 50%;
+                    }
+                    @media #{$mini}{
+                        width: 30%;
+                    }
+                }
+            }
+            .feature-caption{
+                display: inline-block;
+                margin-top: 8px;
+                h4{
+                    font-size: 1.4rem;
+                    margin: 0px;
+                    @media #{$md}{
+                        text-align: center;
+                    }
+                    @media #{$mini}{
+                        text-align: center;
+                    }
+                }
+                span{
+                    display: block;
+                    font-size: 0.8rem;
+                    @media #{$md}{
+                        text-align: center;
+                    }
+                    @media #{$mini}{
+                        text-align: center;
+                    }
+                }
+            }
+            @media #{$md}{
+                border-right: none;
+            }
+            @media #{$mini}{
+                border-right: none;
+            }
+            @media #{$lg}{
+                border-right: none;
+            }
+        }
+        .feature:last-child{
+            border-right: none;
+        }
+    }
+}

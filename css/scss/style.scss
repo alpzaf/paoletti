@@ -1,0 +1,73 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+@import "variables.scss";
+.hidden-rest {
+    @media #{$rest}{
+        display: none !important;
+    }
+}
+.hidden-xl {
+    @media #{$xl} {
+       display: none !important;
+    }
+}
+.hidden-lg {
+    @media #{$lg} {
+       display: none;
+    }
+}
+.hidden-mini {
+    @media #{$mini} {
+        display: none;
+    }
+}
+.hidden-md {
+    @media #{$md} {
+        display: none;
+    }
+}
+.hidden-sm {
+    @media #{$sm} {
+        display: none;
+    }
+}
+.hidden-xs {
+    @media #{$xs} {
+        display: none;
+    }
+}
+.padd15{
+    padding: 0 15px 0 15px;
+    @media #{$md} {
+        padding: 0px;
+    }
+}
+.padd15-mbl{
+    padding: 0 15px 0 15px;
+}
+.left-padd{
+    padding: 0 0 0 15px
+}
+.right-padd{
+    padding: 0 15px 0 0;
+}
+.order6{
+    order: 6;
+}
+@media #{$md}{
+    .md-center{
+        display: flex;
+        justify-content: center
+    }
+}
+
+@import "header.scss";
+@import "slider.scss";
+@import "highlights.scss";
+@import "products.scss";
+@import "categories.scss";
+@import "banner.scss";
+@import "footer.scss";

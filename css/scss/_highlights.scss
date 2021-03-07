@@ -1,0 +1,358 @@
+.categories-highlights{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 50px 80px 50px 80px;
+    .row{
+        .left{
+           .row{
+               .man-shoes{
+                   overflow: hidden;
+                   margin-bottom: 15px;
+                   border-radius: 3px;
+                   @media #{$md}{
+                    padding: 0 5px 0 0;
+                   }
+                   @media #{$mini}{
+                    padding: 0 5px 0 0;
+                   }
+                   @media #{$lg}{
+                    margin-bottom: 15px;
+                   }
+                   @media #{$xl}{
+                    margin-bottom: 15px;
+                   }
+                   .highlight-caption{
+                        background-image: url(../img/erkek-ayakkabilari.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        padding: 53px 0 50px;
+                        height: 258px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                        transition: all 1s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        h4{
+                            text-align: right;
+                            color: white;
+                            padding-bottom: 10px;
+                            &::after{
+                                 content: '';
+                                 position: relative;
+                                 display: block;
+                                 width: 57px;
+                                 height: 3px;
+                                 background: white;
+                                 float: right;
+                                 top: 40px;
+                                 border-radius: 10px;
+                                 right: 58px;
+                            }
+                        }
+                        h6{
+                            text-align: right;
+                            color: #fff;
+                            position: relative;
+                            font-weight: 300;
+                            right: 58px;
+                            padding: 10px 0 10px 100px;
+                            @media #{$md}{
+                                padding: 10px 0 10px 40px;
+                            }
+                            @media #{$mini}{
+                                padding: 10px 0 10px 40px;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            display: block;
+                            text-align: end;
+                            right: 58px;
+                            color: #fff;
+                            font-weight: 300;
+                            transition: all 1s;
+                            text-decoration: none;
+                            &:hover{
+                                transform: scale(1.03);
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                   }
+               }
+               .women-shoes{
+                   border-radius: 3px;
+                   overflow: hidden;
+                   margin-bottom: 15px;
+                   @media #{$md}{
+                       padding: 0 0 0 5px;
+                   }
+                   @media #{$mini}{
+                       padding: 0 0 0 5px;
+                   }
+                   .highlight-caption{
+                        background-image: url(../img/kadin-ayakkabilari.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        padding: 53px 0 50px;
+                        height: 258px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                        transition: all 1s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        h4{
+                            text-align: right;
+                            color: white;
+                            padding-bottom: 10px;
+                            &::after{
+                                content: '';
+                                position: relative;
+                                display: block;
+                                width: 57px;
+                                height: 3px;
+                                background: white;
+                                float: right;
+                                top: 40px;
+                                border-radius: 10px;
+                                right: 58px;
+                            }
+                        }
+                        h6{
+                            text-align: right;
+                            color: #fff;
+                            position: relative;
+                            font-weight: 300;
+                            right: 58px;
+                            padding: 10px 0 10px 100px;
+                            @media #{$md}{
+                                padding: 10px 0 10px 40px;
+                            }
+                            @media #{$mini}{
+                                padding: 10px 0 10px 40px;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            display: block;
+                            text-align: end;
+                            right: 58px;
+                            color: #fff;
+                            font-weight: 300;
+                            transition: all 1s;
+                            text-decoration: none;
+                            &:hover{
+                                transform: scale(1.03);
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .handmade-shoes{
+            border-radius: 3px;
+            height: 100%;
+            overflow: hidden;
+            @media #{$md}{
+                margin: 10px 0 10px 0;
+            }
+            @media #{$mini}{
+                margin: 10px 0 10px 0;
+                padding: 0 15px 0 15px;
+            }
+            .highlight-caption{
+                background-image: url(../img/elyapimi-ayakkabilar.jpg);
+                background-size: cover;
+                background-position: center;
+                padding: 140px 50px 120px;
+                height: 531px;
+                overflow: hidden;
+                border-radius: 3px;
+                transition: all 1s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                @media #{$md}{
+                    padding: 70px 50px 70px;
+                    height: 370px;
+                }
+                @media #{$mini}{
+                    padding: 80px 50px 80px;
+                    height: 370px;
+                }
+                h4{
+                    text-align: left;
+                    color: white;
+                    padding-bottom: 10px;
+                    &::after{
+                        content: '';
+                        position: relative;
+                        display: block;
+                        width: 57px;
+                        height: 3px;
+                        background: white;
+                        top: 23px;
+                        border-radius: 10px;
+                    }
+                }
+                h6{
+                    text-align: left;
+                    color: #fff;
+                    position: relative;
+                    font-weight: 300;
+                    padding: 30px 150px 30px 0;
+                }
+                a{
+                    position: relative;
+                    color: #fff;
+                    font-weight: 300;
+                    transition: all 1s;
+                    text-decoration: none;
+                    &:hover{
+                        transform: scale(1.03);
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .right{
+            .row{
+                .sport-shoes{
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    @media #{$md}{
+                        padding: 0 5px 0 0;
+                    }
+                    @media #{$mini}{
+                        padding: 0 5px 0 0;
+                    }
+                    margin-bottom: 15px;
+                    border-radius: 3px;
+                    .highlight-caption{
+                        background-image: url(../img/spor-ayakkabilar.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        padding: 50px 45px 50px;
+                        height: 258px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                        transition: all 1s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        h4{
+                            text-align: left;
+                            color: white;
+                            padding-bottom: 10px;
+                            &::after{
+                                content: '';
+                                position: relative;
+                                display: block;
+                                width: 57px;
+                                height: 3px;
+                                background: white;
+                                top: 15px;
+                                border-radius: 10px;
+                            }
+                        }
+                        h6{
+                            text-align: left;
+                            color: #fff;
+                            position: relative;
+                            font-weight: 300;
+                            padding: 10px 20px 10px 0;
+                            @media #{$md}{
+                                padding: 10px 40px 10px 0;
+                            }
+                            @media #{$mini}{
+                                padding: 10px 40px 10px 0;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            color: #fff;
+                            font-weight: 300;
+                            transition: all 1s;
+                            text-decoration: none;
+                            &:hover{
+                                transform: scale(1.03);
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .kid-shoes{
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    @media #{$md}{
+                        padding: 0 0 0 5px;
+                    }
+                    @media #{$mini}{
+                        padding: 0 0 0 5px;
+                    }
+                    border-radius: 3px;
+                    .highlight-caption{
+                        background-image: url(../img/cocuk-ayakkabilari.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        padding: 50px 45px 50px;
+                        height: 258px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                        transition: all 1s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        h4{
+                            text-align: left;
+                            color: white;
+                            padding-bottom: 10px;
+                            &::after{
+                                content: '';
+                                position: relative;
+                                display: block;
+                                width: 57px;
+                                height: 3px;
+                                background: white;
+                                top: 15px;
+                                border-radius: 10px;
+                            }
+                        }
+                        h6{
+                            text-align: left;
+                            color: #fff;
+                            position: relative;
+                            font-weight: 300;
+                            padding: 10px 20px 10px 0;
+                            @media #{$md}{
+                                padding: 10px 40px 10px 0;
+                            }
+                            @media #{$mini}{
+                                padding: 10px 40px 10px 0;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            color: #fff;
+                            font-weight: 300;
+                            transition: all 1s;
+                            text-decoration: none;
+                            &:hover{
+                                transform: scale(1.03);
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

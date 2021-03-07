@@ -1,0 +1,108 @@
+.footer{
+    width: 100%;
+    background: #770b1f;
+    .footer-row{
+        padding: 70px 80px 70px 80px;
+        .call{
+            margin: 50px 0 50px 0;
+            img{
+                @media #{$mini}{
+                    width: 50px;
+                }
+            }
+            @media #{$md}{
+                margin: 0;
+            }
+            a{
+                color: white;
+                font-size: 25px;
+                text-decoration: none;
+                font-weight: 900;
+                margin-left: 5px;
+                @media #{$mini}{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .social-icons{
+        list-style: none;
+        margin: 100px 0 0 0;
+        padding: 0px;
+        @media #{$md}{
+            margin: 40px 0 0 0;
+        }
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 15px;
+            border-radius: 50px;
+            a{
+                img{
+                    width: 20px;
+                }
+            }
+        }
+        .facebook{
+            background: #3b5998;
+        }
+        .twitter{
+            background: #00aced;
+        }
+        .instagram{
+            background: #517fa4;
+        }
+        .linkedin{
+            background: #007bb6;
+        }
+        .rss{
+            background: #ee802f;
+        }
+    }
+}
+.footer-right{
+    margin-top: 35px;
+    @media #{$mini}{
+        margin-top: 15px;
+    }
+    ul{
+        display: inline-block;
+        color:#fff;
+        font-weight: 900;
+        list-style: none;
+        font-size: 20px;
+        @media #{$md}{
+            padding-left: 90px;
+        }
+        @media #{$mini}{
+            padding-left: 90px;
+        }
+        li{
+            display: block;
+            color: #c8c8c8;
+            font-weight: 300;
+            padding: 15px 0 0 0;
+            font-size: 18px;
+            cursor: pointer;
+            &:hover{
+                color: white;
+            }
+            a{
+                color: #c8c8c8;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.bottom-bar {
+    width: 100%;
+    border-top: 1px solid #ffffff26;
+    h6{
+        color:#fff;
+        padding: 15px 0 15px 80px;
+        font-weight: 300;
+        margin: 0px;
+    }
+}

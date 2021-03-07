@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paoletti</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="row header-row">
+            <div class="col-lg-6 col-xxl-2 col-sm-6 col-xl-6 logo">
+                <div class="logo-holder">
+                    <img src="img/paoletti-logo.png" alt="Paoletti">
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-10 col-sm-10 col-md-10 kategori-dropdown">
+                <div class="custom-select">
+                    <select>
+                        <option value="0">Kategori</option>
+                        <option value="1">Tüm Kategoriler</option>
+                        <option value="2">Spor Ayakkabılar</option>
+                        <option value="3">Erkek Ayakkabıları</option>
+                        <option value="4">Kadın Ayakkabıları</option>
+                        <option value="5">Çocuk Ayakkabıları</option>
+                        <option value="6">Klasik Ayakkabılar</option>
+                        <option value="7">İndirimli Ürünler</option>
+                        <option value="8">Yeni Ürünler</option>
+                        <option value="9">Çok Satanlar</option>
+                        <option value="10">Yeni Sezon</option>
+                    </select>
+                </div>
+                <div class="search-input">
+                    <input type="text" name="arama" placeholder="Ürün adını girin...">
+                    <a type="submit"><p>ARA</p></a>
+                </div>
+            </div>
+            <div class="col-md-2 order6 hidden-xl hidden-rest navigation-parent">
+                <div class="navigation">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-sm-6 col-md-6 col-xl-6 align-center">
+                <div class="row navigation-row">
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="right-navigation">
+                            <div class="header-icon"><img src="img/user.png" alt="Kurumsal Profilim"></div>
+                            <div class="icon-caption"><h4 class="first">KURUMSAL <br>PROFİLİM</h4></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="right-navigation">
+                            <div class="header-icon"><img src="img/heart.png" alt="Favori Listesi"></div>
+                            <div class="icon-caption"><h4 class="second">FAVORİ <br>LİSTESİ</h4></div>
+                        </div>
+                    </div>
+                    <div id="cart-icon" class="col-lg-4 col-sm-4">
+                        <div class="right-navigation cart">
+                            <div class="header-icon"><img src="img/cart.png" alt="Sepetim">
+                            <span class="quantity">0</span></div>
+                            <div class="icon-caption"><h4 class="thirth">SEPETİM <br><span>438 TL</span></h4></div>
+                        </div>
+                    </div>
+                    <div class="mycart">
+                        <div class="cart-row">
+                            <div class="cart-img">
+                                <img src="img/ayakkabi.png" alt="">
+                            </div>
+                            <div class="cart-caption">
+                                <h5>Ayakkabı Adı</h5>
+                                <h6>Ürün Açıklaması</h6>
+                                <div class="price">336 TL</div>
+                                <div class="quantity-input">
+                                    <form>
+                                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                        <input type="number" id="number" value="0" />
+                                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="cart-remove">X</div>
+                        </div>
+                        <div class="total-price">
+                            <h5>Toplam Fiyat:<br> 336 TL</h5>
+                            <button>Siparişi Tamamla</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-bar col-lg-12 col-sm-12 hidden-md hidden-lg hidden-mini">
+            <ul class="red-bar">
+                <li><a href="#">Spor Ayakkabılar</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Erkek Ayakkabıları</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Kadın Ayakkabıları</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Çocuk Ayakkabıları</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Klasik Ayakkabılar</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">İndirimli Ürünler</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Yeni Ürünler</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Çok Satanlar</a></li>
+                <div class="bar-line"></div>
+                <li><a href="#">Yeni Sezon</a></li>
+            </ul>
+        </div>
+        <div id="mbl-menu" class="col-lg-12 col-sm-12 col-md-12 mbl-menu hidden-xl">
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Ürün Konfigürasyonu</a></li>
+                    <li><a href="#">Çok Satan Ürünlerimiz</a></li>
+                    <li><a href="#">İndirimli Ürünler</a></li>
+                    <li><a href="#">Yeni Sezon</a></li>
+                    <li><a href="#">Spor Ayakkabılar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="products-slider owl-carousel">
+        <div class="slider-img">
+            <div class="slider-caption">
+                <h4>Ayakkabı Çeşitlerinde 200'den Fazla Seçenek
+                    <strong>SPOR AYAKKABILAR</strong>
+                </h4>
+                <h4><strong>%30</strong>'a Varan İndirim</h4>
+                <button>ÜRÜNLERİ İNCELE</button>
+            </div>
+        </div>
+        <div class="slider-img">
+            <div class="slider-caption">
+                <h4>Ayakkabı Çeşitlerinde 200'den Fazla Seçenek
+                    <strong>SPOR AYAKKABILAR</strong>
+                </h4>
+                <h4><strong>%30</strong>'a Varan İndirim</h4>
+                <button>ÜRÜNLERİ İNCELE</button>
+            </div>
+        </div>
+        <div class="slider-img">
+            <div class="slider-caption">
+                <h4>Ayakkabı Çeşitlerinde 200'den Fazla Seçenek
+                    <strong>SPOR AYAKKABILAR</strong>
+                </h4>
+                <h4><strong>%30</strong>'a Varan İndirim</h4>
+                <button>ÜRÜNLERİ İNCELE</button>
+            </div>
+        </div>
+    </section>
+    <section class="categories-highlights">
+        <div class="row">
+            <div class="col-lg-12 col-xl-4 col-sm-12 col-md-12 left" data-aos="zoom-in-up">
+                <div class="row padd15">
+                    <div class="col-lg-6 col-xl-12 col-sm-12 col-md-6 man-shoes">
+                        <div class="highlight-caption">
+                            <h4>Erkek Ayakkabıları</h4>
+                            <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti!</h6>
+                            <a href="#">Tümünü Görüntüle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-12 col-sm-12 col-md-6 women-shoes">
+                        <div class="highlight-caption">
+                            <h4>Kadın Ayakkabıları</h4>
+                            <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti!</h6>
+                            <a href="#">Tümünü Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-4 col-sm-12 col-md-12 mid handmade-shoes" data-aos="zoom-in-up">
+                <div class="highlight-caption">
+                    <h4>Özel El Yapımı<br> Ayakkabılar</h4>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt molestias earum a quos aperiam nisi officiis voluptate omnis quam at?</h6>
+                    <a href="#">Tümünü Görüntüle</a>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-4 col-sm-12 col-md-12 right padd15" data-aos="zoom-in-up">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-12 col-sm-12 col-md-6 sport-shoes">
+                        <div class="highlight-caption">
+                            <h4>Spor Ayakkabıları</h4>
+                            <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti!</h6>
+                            <a href="#">Tümünü Görüntüle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-12 col-sm-12 col-md-6 kid-shoes">
+                        <div class="highlight-caption">
+                            <h4>Çocuk Ayakkabıları</h4>
+                            <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti!</h6>
+                            <a href="#">Tümünü Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products-area">
+        <div class="product-categories">
+            <div class="tab-product-line"></div>
+            <ul>
+                <li id="one" class="active">Yeni Ürünler</li>
+                <div class="slash">/</div>
+                <li id="two">Çok Satanlar</li>
+                <div class="slash">/</div>
+                <li id="three">İndirimli Ürünler</li>
+            </ul>
+            
+        </div>
+        <div class="sub-products">
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque fuga, reprehenderit porro sint quos aperiam odio vero omnis. Est eius laboriosam a tempora non consequatur, accusantium molestias quaerat explicabo!</h6>
+        </div>
+        <div class="item-area">
+            <div id="th-tab-one" class="product-contents tab-content">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="th-tab-two" class="product-contents tab-content">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="th-tab-three" class="product-contents tab-content">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padd15 padd15-mbl mb" data-aos="flip-left">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-bg">
+        <div class="discount-bg" data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <h2>OCAK AYINA ÖZEL<strong>%40 İNDİRİM</strong></h2>
+            <span>* Bu indirimden yararlanabilmek için en az 5000 TL üzerinde sipariş verilmesi gerekmektedir.</span>
+            <button>ÜRÜNLERİ İNCELE</button>
+        </div>
+    </section>
+    <section class="categorie-1">
+        <div class="row">
+            <div class="col-lg-9 col-sm-6 col-md-8">
+                <div class="col-lg-12 title-wrapper">
+                    <h4 class="categorie-title">KATEGORİ ADI</h4>
+                    <div class="categorie-line"></div>
+                    <div class="nav-arrows">
+                        <button type="button" class="customPrevBtn">
+                            <span aria-label="Previous">‹</span>
+                        </button>
+                        <button type="button" class="customNextBtn">
+                            <span aria-label="Next">›</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row categorie-first-slider">
+                    <div class="owl-carousel shoe-slider">
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange-re">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple-re">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange-re">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple-re">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-4 left-padd">
+                <div class="col-lg-12 slider-kampanya">
+                    <div class="highlight-caption">
+                        <h4>KAMPANYA</h4>
+                        <h6><strong class="first-strong">TÜM ÜRÜNLERDE</strong>100 Adet Üzeri Alımlarda <strong class="second-strong">%30</strong> İndirim</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="features-banner">
+            <div class="row features-row">
+                <div class="feature col-md-6 col-lg-6 col-xl-3">
+                    <div class="feature-img">
+                        <img src="img/ucretsiz-gonderim.png" alt="">
+                    </div>
+                    <div class="feature-caption">
+                        <h4>ÜCRETSİZ GÖNDERİM</h4>
+                        <span>Dünyanın heryerine gönderim imkanı</span>
+                    </div>
+                </div>
+                <div class="feature col-md-6 col-lg-6 col-xl-3">
+                    <div class="feature-img">
+                        <img src="img/destek.png" alt="">
+                    </div>
+                    <div class="feature-caption">
+                        <h4>7/24 DESTEK</h4>
+                        <span>Destek ekibimiz her zaman sizlerin yanınızda.</span>
+                    </div>
+                </div>
+                <div class="feature col-md-6 col-lg-6 col-xl-3">
+                    <div class="feature-img">
+                        <img src="img/para-iadesi.png" alt="">
+                    </div>
+                    <div class="feature-caption">
+                        <h4>PARA İADESİ</h4>
+                        <span>Ürünlerimiz firmamız tarafından garanti altındadır.</span>
+                    </div>
+                </div>
+                <div class="feature col-md-6 col-lg-6 col-xl-3">
+                    <div class="feature-img">
+                        <img src="img/handcraft2.png" alt="">
+                    </div>
+                    <div class="feature-caption">
+                        <h4>EL YAPIMI</h4>
+                        <span>Lorem ipsum dolor sit amet.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categorie-1">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-4 right-padd">
+                <div class="col-lg-12 slider-kampanya">
+                    <div class="highlight-caption">
+                        <h4>KAMPANYA</h4>
+                        <h6><strong class="first-strong">TÜM ÜRÜNLERDE</strong>100 Adet Üzeri Alımlarda <strong class="second-strong">%30</strong> İndirim</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-sm-6 col-md-8">
+                <div class="col-lg-12 title-wrapper">
+                    <h4 class="categorie-title">KATEGORİ ADI</h4>
+                    <div class="categorie-line"></div>
+                    <div class="nav-arrows">
+                        <button type="button" class="customPrevBtnSecond">
+                            <span aria-label="Previous">‹</span>
+                        </button>
+                        <button type="button" class="customNextBtnSecond">
+                            <span aria-label="Next">›</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row categorie-first-slider">
+                    <div class="owl-carousel shoe-slider-second">
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange-re">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple-re">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="orange-re">İNDİRİM</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="purple-re">ÇOK SATAN</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item-img">
+                            <img src="img/ayakkabi.png" width="100%" alt="">
+                            <badge class="green-re">YENİ</badge>
+                            <span class="tags">Ayakkabı,Spor Ayakkabı,Beyaz Ayakkabı</span>
+                        </div>
+                        <div class="item-price">
+                            <h6>Ayakkabı Adı</h6>
+                            <span>299 TL</span><span class="flo-r">KDV DAHİL: 336 TL</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-banner">
+        <div class="blue-bg-banner" data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <div class="blue-banner-caption">
+                <h2>2021 NIKE AYAKKABI MODELLERİ<strong>NIKE SERİSİ</strong></h2>
+                <h1>SADECE ÜYELERE ÖZEL</h1>
+                <button>ÜRÜNLERİ İNCELE</button>
+            </div>
+        </div>
+    </section>  
+    <section class="b2b">
+        <div class="row">
+             <div class="col-lg-12">
+                 <h4>B2B AVANTAJLARI</h4>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="flip-up">
+                 <div class="b2b-img"><img src="img/odeme-guvenligi.png" alt=""></div>
+                 <h2><strong>ÖDEME </strong><br>GÜVENLİĞİ</h2>
+                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nisi obcaecati earum aspernatur reprehenderit iure?</h6>
+                 <button>Detaylı Bilgi</button>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="flip-up">
+                <div class="b2b-img"><img src="img/724-destek.png" alt=""></div>
+                 <h2><strong>7/24 </strong><br>DESTEK</h2>
+                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nisi obcaecati earum aspernatur reprehenderit iure?</h6>
+                 <button>Detaylı Bilgi</button>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="flip-up">
+                <div class="b2b-img"><img src="img/fatura-yonetimi.png" alt=""></div>
+                 <h2><strong>FATURA </strong><br>YÖNETİMİ</h2>
+                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nisi obcaecati earum aspernatur reprehenderit iure?</h6>
+                 <button>Detaylı Bilgi</button>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="flip-up">
+                <div class="b2b-img"><img src="img/lojistik-destegi.png" alt=""></div>
+                 <h2><strong>LOJİSTİK </strong><br>DESTEĞİ</h2>
+                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nisi obcaecati earum aspernatur reprehenderit iure?</h6>
+                 <button>Detaylı Bilgi</button>
+             </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row footer-row">
+            <div class="col-lg-3 col-md-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 md-center">
+                        <img src="img/paoletti-logo-beyaz.png" alt="">
+                    </div>
+                    <div class="col-lg-12 col-md-6 call md-center">
+                        <img src="img/headset.png" alt="">
+                        <a href="tel:902126385229">+90 212 638 52 29</a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 md-center">
+                        <ul class="social-icons">
+                            <li class="facebook"><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                            <li class="twitter"><a href="#"><img src="img/twitter.png" alt=""></a></li>
+                            <li class="instagram"><a href="#"><img src="img/instagram.png" alt=""></a></li>
+                            <li class="linkedin"><a href="#"><img src="img/linked-in-logo-of-two-letters.png" alt=""></a></li>
+                            <li class="rss"><a href="#"><img src="img/rss-feed-symbol.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 footer-right">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-6">
+                        <ul>KURUMSAL
+                            <li><a href="#"></a>Hakkımızda</li>
+                            <li><a href="#"></a>İnsan Kaynakları</li>
+                            <li><a href="#"></a>Bize Ulaşın</li>
+                            <li><a href="#"></a>Destek</li>
+                            <li><a href="#"></a>S.S.S</li>
+                            <li><a href="#"></a>K.V.K.K</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-6">
+                        <ul>MÜŞTERİ İLİŞKİLERİ
+                            <li><a href="#"></a>Sipariş Hattı</li>
+                            <li><a href="#"></a>Kişisel Verilerin Korunması</li>
+                            <li><a href="#"></a>Çerez Kullanım Koşulları</li>
+                            <li><a href="#"></a>Gizlilik ve Güvenlik Politikası</li>
+                            <li><a href="#"></a>Müşteri Hizmetleri</li>
+                            <li><a href="#"></a>İade Koşulları</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-6">
+                        <ul>YARDIM
+                            <li><a href="#"></a>Arayüz Kullanımı</li>
+                            <li><a href="#"></a>Ödeme Sorunları</li>
+                            <li><a href="#"></a>Sipariş Problemleri</li>
+                            <li><a href="#"></a>Ürün Sorunları</li>
+                            <li><a href="#"></a>Üyelik Sorunları</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-6">
+                        <ul>ULAŞIM
+                            <li>Sanayi Mah. Başaklı Sok.
+                                No:31-33<br>GÜNGÖREN/İSTANBUL/TÜRKİYE<br>
+                                <a href="mailto:info@paolettishoes.com">Email:info@paolettishoes.com</a>
+                            </li>
+                        </ul>
+                        <ul>ÇALIŞMA SAATLERİ
+                            <li>Hafta İçi: 09:00 - 18:00</li>
+                            <li>Hafta Sonu: 09:00 - 15:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <h6>Tüm Hakları Saklıdır 2021 Paoletti Shoes</h6>
+        </div>
+    </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>  
+  <script src="js/main.js"></script>
+</body>
+</html>
