@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    menu{
+        background: #770b1f;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ul-menu li{
+        display: inline-block;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+    }
+    #categorieWoman:hover .drop-mega {visibility: visible;}
+    #categorieWomanBrand1:hover #brandSub1,
+    #categorieWomanBrand2:hover #brandSub2, 
+    #categorieWomanBrand3:hover #brandSub3 {visibility: visible;}
+    #brandSub1, #brandSub2, #brandSub3 {visibility: hidden;}
+    #subList1:hover #subContent1,
+    #subList2:hover #subContent2,
+    #subList3:hover #subContent3 {visibility: visible;}
+    #subContent1, #subContent2, #subContent3 {visibility: hidden;}
+    .drop-mega{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .ul-menu li{
+        display: inline-block;
+    }
+    .brands-img{
+        background: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .ul-brands li{
+        padding: 15px 30px;
+    }
+    .ul-menu img {
+        width: 150px;
+    }
+    .brands-sub{
+        background: saddlebrown;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-top: 15px;
+    }
+    .sub-content{
+        background: purple;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .sub-content ul {
+        padding: 15px;
+        margin: 0;
+    }
+    .sub-content li {
+        display: block;
+        padding: 0;
+    }
+    .bar-line{
+        height: 20px;
+        top: 25%;
+        position: relative;
+        border-radius: 10px;
+        width: 2px;
+        background: #ffffff8a;
+        margin: 0 5px 0 5px;
+        display: inline-block;
+    }
+    .img-item{
+        margin-left: 50px;
+    }
+    .img-item img{
+        width: 250px;
+    }
+    .img-overlay {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .right-arr::before{
+        content: '⫸';
+        display: block;
+        position: relative;
+        font-size: 20px;
+        color: black;
+    }
+    .ul-flex{
+        display: flex;
+    }
+</style>
+<body>
+    <!-------------------------- 
+    |        MEGA MENU         |
+    --------------------------->
+    <!-------------------------------------------------- 
+    | Mega Menu'nün ilk elementi olan 'Kadın'          |
+    | kategorisi aşağıdaki Id şemasına göre çalışıyor. |
+    --------------------------------------------------->
+    <!------------------------------------
+    | #categorieWoman > .drop-mega       |
+    | #categorieWomanBrand1 > #brandSub1 |
+    | #subList1 > #subContent1           |
+    ------------------------------------->
+    <menu>
+        <ul class="ul-menu ul-flex">
+            <li id="categorieWoman">Kadın                                                                         <!-- #categorieWoman -->
+                <div class="drop-mega">                                                                           <!-- .drop-mega -->
+                    <div class="brands-img">
+                        <ul class="ul-brands ul-flex">
+                            <li id="categorieWomanBrand1"><a href=""><img src="img/paoletti-logo.png" alt=""></a> <!-- #categorieWomanBrand1 -->
+                                <div id="brandSub1" class="brands-sub">                                           <!-- #brandsub1 -->
+                                    <ul class="ul-flex ul-hover">
+                                        <li id="subList1"><a href="#">Ayakkabı</a>                                <!-- #subList1 -->
+                                            <div id="subContent1" class="sub-content">                            <!-- #subContent1 -->
+                                                <ul class="ul-content"><h3>COLLECTION</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                </ul>
+                                                <ul class="ul-content"><h3>EXPERIENCE</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                </ul>
+                                                <div class="hightlight-image">
+                                                    <div class="img-item">
+                                                        <img src="img/ayakkabi.png" width="250px" alt="">
+                                                        <div class="img-overlay">
+                                                            <span>Tüm Ürünler </span><span class="right-arr"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="subList2"><a href="#">Ökçe</a>                                    <!-- #subList2 -->
+                                            <div id="subContent2" class="sub-content">                            <!-- #subContent2 -->
+                                                <ul class="ul-content"><h3>COLLECTION</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                </ul>
+                                                <ul class="ul-content"><h3>EXPERIENCE</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                </ul>
+                                                <div class="hightlight-image">
+                                                    <div class="img-item">
+                                                        <img src="img/ayakkabi.png" width="250px" alt="">
+                                                        <div class="img-overlay">
+                                                            <span>Tüm Ürünler </span><span class="right-arr"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="subList3"><a href="#">Deri</a>                                    <!-- #subList3 -->
+                                            <div id="subContent3" class="sub-content">                            <!-- #subContent3 -->
+                                                <ul class="ul-content"><h3>COLLECTION</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                </ul>
+                                                <ul class="ul-content"><h3>EXPERIENCE</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                </ul>
+                                                <div class="hightlight-image">
+                                                    <div class="img-item">
+                                                        <img src="img/ayakkabi.png" width="250px" alt="">
+                                                        <div class="img-overlay">
+                                                            <span>Tüm Ürünler </span><span class="right-arr"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Deri</a></li>
+                                        <li><a href="#">Deri</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="categorieWomanBrand2"><a href=""><img src="img/paoletti-logo.png" alt=""></a> <!-- #categorieWomanBrand2 -->
+                                <div id="brandSub2" class="brands-sub">                                           <!-- #brandSub2 -->
+                                    <ul class="ul-hover">
+                                        <li><a href="#">Ayakkabı</a>
+                                            <div class="sub-content">
+                                                <ul class="ul-content"><h3>COLLECTION</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum  amet.</a></li>
+                                                </ul>
+                                                <ul class="ul-content"><h3>EXPERIENCE</h3>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                </ul>
+                                                <div class="hightlight-image">
+                                                    <div class="img-item">
+                                                        <img src="img/ayakkabi.png" width="250px" alt="">
+                                                        <div class="img-overlay">
+                                                            <span>Tüm Ürünler </span><span class="right-arr"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Ökçe</a></li>
+                                        <li><a href="#">Ökçe</a></li>
+                                        <li><a href="#">Ökçe</a></li>
+                                        <li><a href="#">Deri</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id ="categorieWomanBrand3"><a href=""><img src="img/paoletti-logo.png" alt=""></a> <!-- #categorieWomanBrand3 -->
+                                <div id="brandSub3" class="brands-sub">                                            <!-- #brandSub3 -->
+                                    <ul class="ul-hover">
+                                        <li><a href="#">Ayakkabı</a>
+                                            <div class="sub-content">
+                                                <ul class="ul-content">Başlık
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum </a></li>
+                                                </ul>
+                                                <ul class="ul-content">Başlık
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                    <li><a href="">Lorem sit amet.</a></li>
+                                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                                </ul>
+                                                <div class="hightlight-image">
+                                                    <div class="img-item">
+                                                        <img src="img/ayakkabi.png" width="250px" alt="">
+                                                        <div class="img-overlay">
+                                                            <span>Tüm Ürünler </span><span class="right-arr"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Ökçe</a></li>
+                                        <li><a href="#">Deri</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                        <li><a href="#">Elmas</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </li>
+            <div class="bar-line"></div>
+            <li>Erkek</li>
+            <div class="bar-line"></div>
+            <li>Çocuk</li>
+            <div class="bar-line"></div>
+            <li>İndirimli Ürünler</li>
+            <div class="bar-line"></div>
+            <li>Yeni Ürünler</li>
+        </ul>
+    </menu>
+    <!-------------------------- 
+    |        MEGA MENU         |
+    --------------------------->
+</body>
+</html>

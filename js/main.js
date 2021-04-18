@@ -66,7 +66,7 @@ document.addEventListener("click", closeAllSelect);
 ////////////////////////////////////////////////////////
 $('.products-slider').owlCarousel({
   loop:true,
-  dots:true,
+  dots:false,
   responsive:{
     0:{
         items:1
@@ -86,26 +86,26 @@ $('.shoe-slider').owlCarousel({
     responsive:{
         0:{
             items:1,
-            nav:false
+            nav:false,
         },
         600:{
             items:1,
-            nav:false
+            nav:false,
         },
         768:{
             items:2,
             nav:false,
-            dots:false
+            dots:false,
         },
         1000:{
             items:3,
             nav:false,
-            dots:false
+            dots:false,
         },
         1366:{
             items:4,
             nav:false,
-            dots:false
+            dots:false,
         },
         1500:{
             items:5,
@@ -149,50 +149,10 @@ $('.shoe-slider-second').owlCarousel({
         }
     }
 });
-/*
-$('.red-bar').owlCarousel({
-    loop:true,
-    autoplay:true,
-    center:true,
-    autoplayHoverPause:true,
-    autoplaySpeed:900,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:false
-        },
-        600:{
-            items:4,
-            nav:false
-        },
-        768:{
-            items:4,
-            nav:false,
-            dots:false
-        },
-        1000:{
-            items:5,
-            nav:false,
-            dots:false
-        },
-        1366:{
-            items:6,
-            nav:false,
-            dots:false
-        },
-        1500:{
-            items:9,
-            nav:false,
-            dots:false,
-            autoplay:false
-        }
-    }
-});
-*/
 ////////////////////////////////////////////////////////
 var owl = $('.shoe-slider');
 var owlSecond = $('.shoe-slider-second');
+
 owl.owlCarousel();
 $('.customNextBtn').click(function() {
     owl.trigger('next.owl.carousel');
@@ -206,8 +166,25 @@ $('.customNextBtnSecond').click(function() {
 $('.customPrevBtnSecond').click(function() {
     owlSecond.trigger('prev.owl.carousel', [300]);
 });
+function triggerLeft() {
+    var owlThird = $('.products-slider');
+    owlThird.trigger('prev.owl.carousel', [700]);
+}
+function triggerRight() {
+    var owlThird = $('.products-slider');
+    owlThird.trigger('next.owl.carousel', [700]);
+}
+$('.right-button').click(function() {
+    owlThird.trigger('next.owl.carousel');
+    $('.right-button').click(function() {
+        owlThird.trigger('next.owl.carousel');
+    });
+});
+$('.left-button').click(function() {
+    owlThird.trigger('prev.owl.carousel', [300]);
+});
 
-////////////////////////////////////////////////////////
+/////////////// Anasayfa Ürün Kategori Tabs /////////////
 $(function () {
   $('.tab-content').hide();
   $('#th-tab-one').fadeIn('slow');
@@ -236,25 +213,26 @@ $(function () {
   })
   
 });
-////////////////////////////////////////////////////////
+//////////////// Sepet aç-kapat ////////////////////////
 $('#cart-icon').click(function(){
   $('.mycart').toggleClass('cart-active');
 });
-////////////////////////////////////////////////////////
+///////////// Sepet adet arttırma //////////////////////
 function increaseValue() {
     var value = parseInt(document.getElementById('number').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
     document.getElementById('number').value = value;
-}
+  }
+  
   function decreaseValue() {
     var value = parseInt(document.getElementById('number').value, 10);
     value = isNaN(value) ? 0 : value;
     value < 1 ? value = 1 : '';
     value--;
     document.getElementById('number').value = value;
-}
-// Navigation Menu Js
+  }
+/////////////// Navigation Menu Js ////////////////////
 const navigation = document.querySelector('.navigation');
 const mblMenu = document.getElementById('mbl-menu');
 function toggleMenuIcon() {
@@ -262,3 +240,38 @@ function toggleMenuIcon() {
     mblMenu.classList.toggle('menu-active');
 }
 navigation.addEventListener('click', toggleMenuIcon, false);
+
+////////////// Homepage Cursor Nav ////////////////////
+var owlThird = $('.products-slider');
+var wrapper = document.querySelector('.products-slider');
+var btns = wrapper.getElementsByTagName('button');
+var wrapperWidth = wrapper.offsetWidth;
+var wrapperLeft = wrapperWidth / 2;
+function triggerLeft() {
+    var owlThird = $('.products-slider');
+    owlThird.trigger('prev.owl.carousel', [700]);
+}
+function triggerRight() {
+    var owlThird = $('.products-slider');
+    owlThird.trigger('next.owl.carousel', [700]);
+}
+wrapper.addEventListener('mousemove', (event) => {
+    var xSet = event.clientX;
+    if (xSet < wrapperLeft) {
+        wrapper.classList.remove('nav-right')
+        wrapper.classList.add('nav-left')
+    }else if (xSet > wrapperLeft) {
+        wrapper.classList.remove('nav-left')
+        wrapper.classList.add('nav-right')
+    }else if (btns[i].style.cursor = "pointer") {
+        wrapper.classList.remove('nav-left')
+        wrapper.classList.remove('nav-right')
+    }
+});
+for (i=0; i < btns.length; i++) {
+    btns[i].addEventListener('mouseenter', () => {
+        [...btns].classList.toggle('z99')
+    })
+}
+
+console.log(btns)

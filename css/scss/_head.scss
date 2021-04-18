@@ -1,0 +1,133 @@
+.new-menu{
+    font-size: 16px;
+    --fontSize: 16px;
+    width: 100%;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div:first-child{
+        width: 30%;
+        .logo{
+            width: 100%;
+            img{
+                width: 11.56rem;
+            }
+        }
+    }
+    div:nth-child(2){
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .search-bar{
+            width: 40%;
+            .custom-select {
+                position: relative;
+                font-family: Arial;
+                select {
+                    display: none;
+                }
+            }
+            .select-selected {
+                background-color: #f4f4f4;
+                color: #808489;
+                padding: 10px;
+                border: 2px solid #f4f4f4;
+                border-radius:3px 0 0 3px;
+                cursor: pointer;
+                user-select: none;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 23px;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-color: #808489 transparent transparent transparent;
+                }
+            }
+            .select-selected.select-arrow-active {
+                &:after {
+                    border-color: transparent transparent #808489 transparent;
+                    top: 16px;
+                }
+            }
+            .select-items {
+                position: absolute;
+                background-color: #f4f4f4;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+                div {
+                    color: #808489;
+                    padding: 8px 16px;
+                    border: 1px solid transparent;
+                    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                    cursor: pointer;
+                    user-select: none;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+            .select-hide {
+                display: none;
+            }
+            .same-as-selected {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+        .search-input{
+            width: 40%;
+            input{
+                display: inline-block;
+                float: left;
+                border:2px solid #f4f4f4;
+                border-left: none;
+                border-right: none;
+                padding: 10px 10px 10px 10px;
+                outline: none;
+            }
+            a{
+                display: inline-block;
+                float: left;
+                padding: 11px 35px 10px 35px;
+                border: 1px solid #770b1f;
+                background: #770b1f;
+                border-radius: 0 3px 3px 0;
+                position: relative;
+                p{
+                    color: white;
+                    text-align: center;
+                    margin: 0;
+                }
+                &::before{
+                    content: '⫸';
+                    text-align: center;
+                    font-size: 25px;
+                    position: absolute;
+                    background: #f4f4f4;
+                    width: 0%;
+                    left: 0;
+                    color: transparent;
+                    bottom: 0;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    transition: all 0.3s;
+                }
+                &:hover::before{
+                    width: 100%;
+                    color: #770b1f;
+                }
+            }
+        }
+    }
+    div:last-child{
+        width: 30%;
+    }
+}

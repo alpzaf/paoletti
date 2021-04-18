@@ -1,0 +1,89 @@
+
+.mega-menu {
+    visibility: hidden;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    background: #770b20;
+    height: 100%;
+}
+.mm-active{
+    display: block;
+}
+.brands{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #f4f4f482;
+    .brand-logo{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 10px 0;
+        &:hover{
+            .brand-categorie{
+                visibility: visible !important;
+            }
+        }
+        img{
+            width: 60%;
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            transition: all 0.3s;
+        }
+        &:hover::before{
+            width: 100%;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+}
+.brand-categorie{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    ul{
+        width: 100%;
+        list-style: none;
+        visibility: hidden;
+        position: absolute;
+        li{
+            display: inline-block;
+        }
+    }
+}
+.brand-content{
+    position: relative;
+    .brand-menu{
+        margin: 0 auto;
+        padding: 10px 15px;
+        width: 100%;
+        ul{
+            list-style: none;
+            display: block;
+            width: auto;
+            padding: 15px 0 0 30px;
+            li{
+                display: block;
+                text-align: left;
+                color: #fff;
+                padding: 0;
+            }
+        }
+        .upcoming{
+            float: right;
+            width: 100%;
+        }
+    }
+}

@@ -11,9 +11,13 @@
     height: 685px;
 }
 .slider-caption{
-    padding: 240px 150px;
+    left: 7%;
+    top: 35%;
+    position: absolute;
+    z-index: 15;
     @media #{$md}{
-        padding: 50px 30px;
+        left: 7%;
+        top: 35%;
     }
     h4:nth-child(1){
         color: #770b1f;
@@ -41,6 +45,15 @@
         border: 1px solid #770b1f;
         border-radius: 3px;
         padding: 10px 15px 10px 15px;
+        z-index: 15;
+        position: relative;
+        z-index: 15;
+        cursor: pointer !important;
+        &:hover{
+            .nav-left{
+                z-index: -10;
+            }
+        }
     }
 }
 
@@ -63,3 +76,17 @@
         }
     }
 }
+.nav-left{
+    cursor: url(../../img/arrow-prevcur.cur),auto;
+    cursor: url(../../img/arrow-prev.svg) 25 25,auto;
+    cursor: -webkit-image-set(url(../../img/arrow-prev@2x.png) 1x,url(../../img/arrow-prev@2x.png) 2x) 25 25,auto
+}
+.nav-right{
+    cursor: url(../../img/arrow-nextcur.cur),auto;
+    cursor: url(../../img/arrow-next.svg) 25 25,auto;
+    cursor: -webkit-image-set(url(../../img/arrow-next@2x.png) 1x,url(../../img/arrow-next@2x.png) 2x) 25 25,auto;
+}
+
+
+
+
